@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import leon from "./leon.png";
 
 export default class Navbar extends Component {
     render() {
@@ -29,6 +30,7 @@ export default class Navbar extends Component {
                         </li>
                     </ul>
                 </div>
+                    <img src={leon} width="40" height="40" />
             </nav>
         )
     }

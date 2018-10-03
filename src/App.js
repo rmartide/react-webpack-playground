@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import GoogleLogin from 'react-google-login';
 import config from './conf.json';
 import axios from 'axios';
+import leon from "./leon.png";
 export default class App extends Component {
 
     handle1 = () => {
@@ -22,7 +23,7 @@ export default class App extends Component {
         console.log(response);
     }
     render() {
-        console.log(config);
+        const navbar = () => import('./Navbar');
         return (
             <React.Fragment>
                 <Navbar />
