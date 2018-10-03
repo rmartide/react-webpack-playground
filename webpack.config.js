@@ -27,6 +27,11 @@ module.exports = {
             { test: /\.scss|sass|css$/, use: ['style-loader', 'css-loader', 'sass-loader']}
         ]
     },
+    devServer: {
+        proxy: {
+              '/': 'http://localhost:3001'
+        }
+    },
     plugins: [
         new HtmlWebpackPlugin({template: './public/index.html'})
     ]
