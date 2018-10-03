@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Navbar from './Navbar';
 import GoogleLogin from 'react-google-login';
 import config from './conf.json';
 import axios from 'axios';
@@ -24,6 +25,7 @@ export default class App extends Component {
         console.log(config);
         return (
             <React.Fragment>
+                <Navbar />
                 <div className="al"></div>
                 <div className="container">
                     <div className="header">Sign In</div>
