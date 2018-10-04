@@ -3,8 +3,11 @@ import Navbar from './Navbar';
 import GoogleLogin from 'react-google-login';
 import config from './conf.json';
 import axios from 'axios';
-import leon from "./leon.png";
 export default class App extends Component {
+
+    constructor(props) {
+        super(props);
+    }
 
     handle1 = () => {
         rect.setAttribute("class", "rect2");
@@ -23,7 +26,6 @@ export default class App extends Component {
         console.log(response);
     }
     render() {
-        const navbar = () => import('./Navbar');
         return (
             <React.Fragment>
                 <Navbar />
