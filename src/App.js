@@ -16,14 +16,16 @@ export default class App extends Component {
     handle2 = () => {
         rect.setAttribute("class", "rect1");
     }
-
+    copyToClipboard = (str) => {
+        navigator.clipboard.writeText(str);
+    }
     responseGoogle = (response) => {
-        axios.get('/login',{ headers: {'x-auth' : response.tokenId}}).then((result) => {
+        axios.get('/login', { headers: { 'x-auth': response.tokenId } }).then((result) => {
             console.log(result);
         }).catch((err) => {
             console.log(err);
         });
-        console.log(response);
+        this.copyToClipboard(response.tokenId);
     }
     render() {
         return (
