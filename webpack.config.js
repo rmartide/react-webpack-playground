@@ -10,7 +10,10 @@ module.exports = {
     },
     resolve: {
         modules: ['node_modules'],
-        extensions: ['.js', '.json']
+        extensions: ['.js', '.json'],
+        alias: {
+            '@components': path.resolve(__dirname, 'src/components/')
+        }
     },
     module: {
         rules: [

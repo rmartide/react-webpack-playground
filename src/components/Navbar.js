@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import leon from "./leon.png";
+import leon from "../leon.png";
 
 export default class Navbar extends Component {
     render() {
