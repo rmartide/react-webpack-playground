@@ -2,10 +2,11 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: './src',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'output.budle.js'
+        filename: 'output.budle.js',
+        libraryTarget: 'umd'
     },
     resolve: {
         modules: ['node_modules'],
@@ -38,9 +39,9 @@ module.exports = {
         ]
     },
     devServer: {
-        proxy: {
-            '/': 'http://localhost:3001'
-        }
+        port: 9000,
+        hot: true,
+        contentBase: './dist'
     },
     plugins: [
         new HtmlWebpackPlugin({ template: './public/index.html' })
