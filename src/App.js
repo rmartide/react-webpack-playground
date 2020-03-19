@@ -1,5 +1,6 @@
 import Navbar from '@components/Navbar';
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import Zoom from 'react-reveal/Zoom';
 
 export default function App() {
 
@@ -8,8 +9,13 @@ export default function App() {
     return (
         <>
             <Navbar></Navbar>
-            <h1>Times clicked: {timesClicked}</h1>
-            <button onClick={() => setTimesClicked(timesClicked + 1)}>Click me!</button>
+            <div className="container-fluid">
+                <h1>Times clicked (ye boi): {timesClicked}</h1>
+                <button className="btn btn-danger" onClick={() => setTimesClicked(timesClicked + 1)}>Click me!</button>
+                <Zoom>
+                    <h2>It's me DIO!</h2>
+                </Zoom>
+            </div>
         </>
     )
 }

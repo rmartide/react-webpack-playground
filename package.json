@@ -26,6 +26,7 @@
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-google-login": "^5.1.2",
+    "react-reveal": "^1.2.2",
     "url-loader": "^4.0.0"
   },
   "devDependencies": {
